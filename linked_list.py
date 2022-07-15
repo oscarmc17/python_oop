@@ -200,6 +200,15 @@ class Employee:
         first, last, pay = emp_str.split('-')
         return cls(first, last, pay)
     
+    # Create a function that will return a new instance of the class
+    # Employee with the given first and last name.
+    @classmethod
+    def from_fullname(cls, fullname):
+        first, last = fullname.split(' ')
+        return cls(first, last, 0)
+        
+
+
 emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'Employee', 60000)
 
