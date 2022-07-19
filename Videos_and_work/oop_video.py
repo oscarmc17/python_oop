@@ -84,3 +84,8 @@ class Item:
 import csv
 
 class Item:
+
+phone1 = Item("jscPhonev10", 500, 5)
+broken1.broken_phones = 1
+phone2 = Item("jscPhonev20", 700, 5)
+broken1.broken_phones = 1
