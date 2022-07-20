@@ -1,4 +1,4 @@
-# # OOP Tutorial 7.18.22
+# # OOP Tutorial 7.19.22
 import csv
 
 class Item:
@@ -50,37 +50,31 @@ class Item:
             return False
         
 
-
     def __repr__(self):
-        return f"Item('{self.name}', {self.price}, {self.quantity})"
-
-
-
-    # print(Item.is_integer(7.0))
+        return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
 
 
 # INHERITANCE
 class Phone(Item):
-     def __init__(self, name: str, price: float, quantity=0):
+    def __init__(self, name: str, price: float, quantity=0, broken_phones=0):
+        # Call to super function to have access to all attributes/methods.
+        super().__init__(
+            name, price, quantity
+        )
+        
         # Run validations to the received arguments
-        assert price >= 0, f"Price {price} is not greater than or equal to zero!"
-        assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
+        assert broken_phones >= 0, f"Broken Phones {broken_phones} is not greater or equal to zero!"
         
         # Assign to self object
-        self.name = name
-        self.price = price
-        self.quantity = quantity
-
-        # Actions to execute
-        Item.all.append(self)
+        self.broken_phones = broken_phones
 
 
 
 
-phone1 = Phone("jscPhonev10", 500, 5)
-phone1.broken_phones = 1
-phone2 = Phone("jscPhonev20", 700, 5)
-phone2.broken_phones = 1
+phone1 = Phone("jscPhonev10", 500, 5, 1)
+
+print(Item.all)
+print(Phone.all)
 
 
 
