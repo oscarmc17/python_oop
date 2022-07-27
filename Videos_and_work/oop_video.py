@@ -1,24 +1,12 @@
-# # OOP Tutorial 7.21.22
+# # OOP Tutorial 7.26.22
 
 from item import Item
-from phone import Phone
+# from phone import Phone
 
- 
-print(Item.all)
+item1 = Item("MyItem", 750)
 
+print(item1.name)
 
-# When to use class methods and when to use statisc methods?
+print(item1.read_only_name)
 
-# class Item:
-#     @staticmethod
-#     def is_integer(num):
-        
-#     #    This should do something that has a relationship with a class,
-#     #    but not something that must be unique per instance!
-
-#         @classmethod
-#         def instance_from_something(cls):
-#             # This should do something that has a relationship with the class,
-#             # but usually, those are used to manipulate different structures
-#             # of data to instantiate objects, like we have done with CSV.
-#             pass
+item1.read_only_name = 'BBB'
