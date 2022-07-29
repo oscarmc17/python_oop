@@ -86,3 +86,6 @@ print(emp_1.email)
 print(emp_1.fullname)
 
 del emp_1.fullname
+
+# Getting an Attribute
+print(item1.name)
