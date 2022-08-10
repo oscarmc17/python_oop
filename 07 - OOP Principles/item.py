@@ -10,9 +10,9 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
 
         # Assign to self object
-        self.__name = name
-        self.__price = price
-        self.quantity = quantity
+        # self.__name = name
+        # self.__price = price
+        # self.quantity = quantity
 
         # Actions to execute
         Item.all.append(self)
